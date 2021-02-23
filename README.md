@@ -1,18 +1,18 @@
-### Clinics - React App
+# Clinics - React App
 
 ## Used Packages:
 
      "@material-ui/core" &  "@material-ui/icons"
 
-## Installing:
+# Installing:
 
 1: Created with "npx create-react-app".
 2: Deleted the generated src folder and created a clean one.
 3: Created needed files and folders, ('App structure'): Screens, Components, Hooks, etc..
 
-## Building:
+# Building:
 
-# Visual:
+## Visual:
 
 1: Took a screenshot of Myndlift logo from the website.
 2: Used Photoshop to convert it to png with transparent background.
@@ -22,7 +22,7 @@
 6: Built Search bar, Card, Cardlist etc.. as a seperate components.
 6: Done with the visual side and moving to the logical side.
 
-# Logical:
+## Logical:
 
 1: Created a function that converts the json file into a filtered array of objects.
 2: Added the convert function inside a Utils folder.
