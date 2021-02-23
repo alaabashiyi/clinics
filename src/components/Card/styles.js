@@ -12,10 +12,6 @@ const useStyles = makeStyles({
     width: "81%",
     boxShadow: "1px 2px 10px #9E9E9E",
   },
-  paper: {
-    padding: 2,
-    textAlign: "center",
-  },
   img: {
     height: 150,
     width: 150,

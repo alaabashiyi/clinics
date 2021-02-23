@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Specialties from "../Specialties";
 import { Grid, Typography, Button, Collapse } from "@material-ui/core";
 import useStyles from "./styles";
+const imgUrl = `https://randomuser.me/api/portraits/women/45.jpg`;
+
 function Card({ data }) {
   const {
     firstName,
@@ -18,7 +20,7 @@ function Card({ data }) {
 
   const [seeMore, setSeeMore] = useState(false);
   const styles = useStyles();
-  const imgUrl = `https://randomuser.me/api/portraits/women/45.jpg`;
+
   return (
     <div className={styles.container}>
       <Grid container spacing={2}>
@@ -59,17 +61,6 @@ function Card({ data }) {
               {`${biography.slice(0, 150)}...`}
             </Typography>
           </Collapse>
-
-          {/* <Typography
-            gutterBottom
-            variant="body2"
-            align="left"
-            color="inherit"
-            onClick={() => setSeeMore(!seeMore)}
-          >
-            
-            <Collapse in={!seeMore}>{`${biography.slice(0, 150)}...`}</Collapse>
-          </Typography> */}
         </Grid>
         <Grid item xs={3}>
           <Typography
