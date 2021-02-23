@@ -1,11 +1,15 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
+import { globalContext } from "../../context/context";
 import { Container, Typography } from "@material-ui/core";
 import SearchBar from "../../components/SearchBar";
 import useStyles from "./styles";
 import CardList from "../../components/CardList";
+import FormOverlay from "../../components/FormOverlay";
 
-function Home(props) {
-  const [search, setSearch] = useState("");
+const Home = (props) => {
+  const { open, setOpen, search, filterData, data } = useContext(globalContext);
+  const handleClose = () => setOpen(false);
+
   const styles = useStyles();
   return (
     <div className={styles.container}>
@@ -13,24 +17,21 @@ function Home(props) {
         <Typography variant="h1" component="h2" className={styles.header}>
           Nearby Myndlift Providers
         </Typography>
-        <SearchBar
-          filterData={props.filterData}
-          search={search}
-          setSearch={setSearch}
-        />
+        <SearchBar filterData={filterData} />
         <Typography
           variant="subtitle2"
           align="left"
           className={styles.resultsHeader}
         >
-          {props.data.length > 0
-            ? `Showing ${props.data.length} results for "${search}"`
+          {data.length > 0
+            ? `Showing ${data.length} results for "${search}"`
             : `No results for ""`}
         </Typography>
-        {props.data && <CardList {...props} />}
+        {data && <CardList {...props} data={data} />}
       </Container>
+      <FormOverlay open={open} handleClose={handleClose} />
     </div>
   );
-}
+};
 
 export default Home;

@@ -27,7 +27,12 @@
 1. Created a function that converts the json file into a filtered array of objects.
 2. Added the convert function inside a Utils folder.
 3. Created a custom hook for data filtering, called "useData", this custom hook returns a filtered array whenever it called. and returns an empty array on initalization.
+4. Used Context API for global state management, i could've used Redux but it's a very small application.
 
 ## Running:
 
 There was some warning and errors that i had to unit test the faulty compoenets, fixed the errors and warnings.
+
+## NOTE:
+
+a lot of static text can be dynamic and more compoenets can be modified for reusable purpose but we're short in time.

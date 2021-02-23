@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
+import { globalContext } from "../../context/context";
 import useStyles from "./styles";
 import { Paper, InputBase, IconButton, Button } from "@material-ui/core";
 
 import SearchIcon from "@material-ui/icons/Search";
 
-function SearchBar({ search, setSearch, filterData }) {
+function SearchBar({ filterData }) {
+  const { search, setSearch } = useContext(globalContext);
   const styles = useStyles();
-
   return (
     <>
       <div className={styles.searchContainer}>

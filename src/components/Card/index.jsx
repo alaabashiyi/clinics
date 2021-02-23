@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import Specialties from "../Specialties";
 import { Grid, Typography, Button, Collapse } from "@material-ui/core";
 import useStyles from "./styles";
+import { globalContext } from "../../context/context";
 const imgUrl = `https://randomuser.me/api/portraits/women/45.jpg`;
 
 function Card({ data }) {
@@ -18,8 +19,20 @@ function Card({ data }) {
     clinicName,
   } = data[Object.keys(data)[0]];
 
+  const { setCurrentClinic, setOpen } = useContext(globalContext);
+
   const [seeMore, setSeeMore] = useState(false);
+
   const styles = useStyles();
+
+  useEffect(() => {
+    setCurrentClinic({ data: null, isLoading: true });
+  }, [setCurrentClinic]);
+
+  const handleMessage = () => {
+    setCurrentClinic({ data: data[Object.keys(data)[0]], isLoading: false });
+    setOpen(true);
+  };
 
   return (
     <div className={styles.container}>
@@ -92,8 +105,15 @@ function Card({ data }) {
           </Collapse>
         </div>
         <Grid item xs={3}>
-          <Button className={styles.viewBtn}>View Profile</Button>
-          <Button className={styles.sendBtn}>Send Message</Button>
+          <Button
+            onClick={() => setSeeMore(!seeMore)}
+            className={styles.viewBtn}
+          >
+            {!seeMore ? `View Profile` : `Hide Profile`}
+          </Button>
+          <Button onClick={handleMessage} className={styles.sendBtn}>
+            Send Message
+          </Button>
         </Grid>
       </Grid>
     </div>

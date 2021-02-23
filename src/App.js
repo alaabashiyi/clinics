@@ -2,16 +2,16 @@ import React from "react";
 import TopBar from "./components/TopBar";
 import Home from "./screens/Home";
 import Footer from "./components/Footer";
-
-import { useData } from "./hooks/useData";
+import GlobalContextProvider from "./context/context";
 
 function App() {
-  const [data, filterData] = useData();
   return (
     <>
-      <TopBar />
-      <Home data={data} filterData={filterData} />
-      <Footer />
+      <GlobalContextProvider>
+        <TopBar />
+        <Home />
+        <Footer />
+      </GlobalContextProvider>
     </>
   );
 }
