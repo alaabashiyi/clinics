@@ -9,7 +9,7 @@ const FormOverlay = React.forwardRef((props, ref) => {
   return (
     <div className={styles.container}>
       <Modal className={styles.modal} open={open} onClose={handleClose}>
-        <Form {...props} ref={ref} name={"Alaa Bashiyi"} />
+        <Form {...props} ref={ref} />
       </Modal>
     </div>
   );
