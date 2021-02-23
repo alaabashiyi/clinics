@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+### Clinics - React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Used Packages:
 
-## Available Scripts
+     "@material-ui/core" &  "@material-ui/icons"
 
-In the project directory, you can run:
+## Installing:
 
-### `yarn start`
+1: Created with "npx create-react-app".
+2: Deleted the generated src folder and created a clean one.
+3: Created needed files and folders, ('App structure'): Screens, Components, Hooks, etc..
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Building:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# Visual:
 
-### `yarn test`
+1: Took a screenshot of Myndlift logo from the website.
+2: Used Photoshop to convert it to png with transparent background.
+3: The closest font was Roboto so i used that font from google fonts.
+4: Started from top to bottom, build the top bar with the logo as a seperate component.
+5: Built a home screen to display everything needed in it.
+6: Built Search bar, Card, Cardlist etc.. as a seperate components.
+6: Done with the visual side and moving to the logical side.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Logical:
 
-### `yarn build`
+1: Created a function that converts the json file into a filtered array of objects.
+2: Added the convert function inside a Utils folder.
+3: Created a custom hook for data filtering, called "useData", this custom hook returns a filtered array whenever it called. and returns an empty array on initalization.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Running:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+There was some warning and errors that i had to unit test the faulty compoenets, fixed the errors and warnings.
